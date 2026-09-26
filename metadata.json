@@ -1,0 +1,11 @@
+{
+  "name": "BusCrowd AI",
+  "description": "Система компьютерного зрения для подсчета пассажиров и распознавания людей в реальном времени с использованием TensorFlow.js COCO-SSD.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
