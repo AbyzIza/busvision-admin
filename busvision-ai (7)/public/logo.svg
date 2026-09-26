@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Aerodynamic Roofline & Windshield Contour -->
+  <path
+    d="M 120 178 
+       C 160 142 205 118 245 106 
+       C 295 92 345 98 368 114 
+       C 382 124 388 140 382 170
+       C 380 178 370 178 368 170
+       C 374 144 368 132 356 124
+       C 336 112 292 108 248 120
+       C 212 130 172 152 136 184
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Left side fast swoosh / A-pillar speed profile -->
+  <path
+    d="M 172 128
+       C 195 120 220 115 235 115
+       L 242 128
+       C 222 130 195 142 165 175
+       L 182 250
+       C 195 275 212 292 225 298
+       C 210 292 192 272 175 240
+       C 162 215 155 175 172 128
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Lower dynamic speed flare on left -->
+  <path
+    d="M 140 212
+       C 165 212 188 225 208 252
+       C 218 266 226 280 230 292
+       C 224 282 212 268 198 252
+       C 180 232 162 224 140 224
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Front Windshield Left Pillar & Frame -->
+  <path
+    d="M 235 122
+       C 238 120 242 122 243 126
+       L 248 308
+       C 248 318 244 322 238 322
+       C 234 322 232 316 232 308
+       L 228 132
+       C 228 125 231 122 235 122
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Left Side-View Mirror -->
+  <path
+    d="M 245 128
+       C 255 132 268 142 272 158
+       L 272 205
+       C 272 212 268 215 260 215
+       C 252 215 248 210 248 202
+       L 250 162
+       C 248 152 242 145 236 142
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Right Side-View Mirror (distinctive arched hanging mirror) -->
+  <path
+    d="M 358 132
+       C 372 142 384 158 384 185
+       L 384 218
+       C 384 225 378 228 368 228
+       C 358 228 354 224 354 218
+       L 354 188
+       C 354 165 348 150 338 142
+       C 345 136 352 133 358 132
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Lower Windshield bottom edge / Dashboard line -->
+  <path
+    d="M 248 262
+       C 285 272 335 272 375 260
+       C 378 266 376 272 372 278
+       C 332 290 282 290 246 278
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Headlight Bar & Grille Unit -->
+  <path
+    d="M 244 290
+       L 282 302
+       L 358 302
+       L 375 288
+       C 378 294 378 302 374 312
+       L 354 325
+       L 288 325
+       L 248 310
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Lower Grille Inset -->
+  <path
+    d="M 290 305
+       L 354 305
+       L 352 322
+       L 294 322
+       Z"
+    fill="#0b4f6c"
+  />
+
+  <!-- Front Bumper Chin / Bottom Aero Line -->
+  <path
+    d="M 240 342
+       C 275 352 335 352 372 335
+       C 376 342 374 348 368 354
+       C 328 372 272 370 238 354
+       C 234 350 234 344 240 342
+       Z"
+    fill="#0b4f6c"
+  />
+</svg>
