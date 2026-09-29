@@ -25,22 +25,16 @@ export const firebaseConfig = {
   measurementId: "G-DF32WV8773"
 };
 
-// 1. Initialize Firebase & Services
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 export const database: Database = getDatabase(app);
 export const db: Database = database;
 export const auth: Auth = getAuth(app);
 
-// 2. Configure Google Auth Provider with forced account selector
 export const googleAuthProvider = new GoogleAuthProvider();
 googleAuthProvider.setCustomParameters({
   prompt: 'select_account'
 });
 
-/**
- * Sign in with Google Popup.
- * Forced `prompt: 'select_account'` ensures the Google account picker is always shown.
- */
 export async function loginWithGoogle(): Promise<FirebaseUser> {
   const provider = new GoogleAuthProvider();
   provider.setCustomParameters({
@@ -50,17 +44,12 @@ export async function loginWithGoogle(): Promise<FirebaseUser> {
   return result.user;
 }
 
-/**
- * Sign in with Email and Password
- */
+
 export async function loginWithEmail(email: string, pass: string): Promise<FirebaseUser> {
   const result = await signInWithEmailAndPassword(auth, email.trim(), pass);
   return result.user;
 }
 
-/**
- * Register new user with Email, Password and optional Display Name
- */
 export async function registerWithEmail(
   email: string, 
   pass: string, 
@@ -75,23 +64,13 @@ export async function registerWithEmail(
   return result.user;
 }
 
-/**
- * Sign out current user
- */
 export async function logoutUser(): Promise<void> {
   await signOut(auth);
 }
-
-/**
- * Send password reset email
- */
 export async function sendResetPassword(email: string): Promise<void> {
   await sendPasswordResetEmail(auth, email.trim());
 }
 
-/**
- * Format Firebase Auth errors into clear, friendly Russian messages
- */
 export function formatAuthError(error: unknown): string {
   if (!error) return 'Произошла непредвиденная ошибка авторизации.';
   const code = (error as { code?: string })?.code || '';
@@ -131,19 +110,12 @@ export function formatAuthError(error: unknown): string {
   }
 }
 
-/**
- * Sends the current passenger occupancy count to Firebase Realtime Database
- * at path `bus/42/occupancy`.
- */
+
 export function syncOccupancyToFirebase(occupancy: number): Promise<void> {
   const occupancyRef = ref(database, 'bus/42/occupancy');
   return set(occupancyRef, occupancy);
 }
 
-/**
- * Sends real-time GPS coordinates of the bus to Firebase Realtime Database
- * at path `bus/42/location`.
- */
 export async function syncLocationToFirebase(
   lat: number, 
   lng: number, 
@@ -173,9 +145,6 @@ export async function updateStopWaitingCount(count: number): Promise<void> {
   }
 }
 
-/**
- * Subscribes to Firebase Realtime Database connection status via `.info/connected`.
- */
 export function subscribeToFirebaseConnection(
   onStatusChange: (isConnected: boolean) => void
 ): () => void {
