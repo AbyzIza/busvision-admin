@@ -59,7 +59,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
     }
 
-    // 2. Attach real Firebase Auth state listener
     const unsubscribe = onAuthStateChanged(auth, (fbUser) => {
       setRawFirebaseUser(fbUser);
       if (fbUser) {
