@@ -19,8 +19,6 @@
     letter-spacing: -0.011em;
   }
 }
-
-/* Custom scrollbar in macOS style */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -36,7 +34,6 @@
   background: rgba(0, 0, 0, 0.28);
 }
 
-/* Leaflet popup refinement for Apple design */
 .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(20px) !important;
