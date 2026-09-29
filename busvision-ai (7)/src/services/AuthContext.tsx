@@ -46,7 +46,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [authError, setAuthError] = useState<string | null>(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
 
-  // Synchronize Firebase Auth state
   useEffect(() => {
     // 1. Check if we have an active Demo Session in localStorage first
     const savedDemo = localStorage.getItem(DEMO_USER_STORAGE_KEY);
